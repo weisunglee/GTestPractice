@@ -12,7 +12,21 @@ namespace assert {
     };
 
     TEST_F(CalculatorTest, TestAddTwoInt) {
-        EXPECT_EQ(Calculator<int>::Add(2, 3), 5);
+        // 1 + 1 == 2
+        ASSERT_EQ(Calculator<int>::Add(1, 1), 2);
+        EXPECT_EQ(Calculator<int>::Add(1, 1), 2);
+        // 1 + 1 >= 2
+        ASSERT_GE(Calculator<int>::Add(1, 1), 2);
+        EXPECT_GE(Calculator<int>::Add(1, 1), 2);
+        // 1 + 1 > 1
+        ASSERT_GT(Calculator<int>::Add(1, 1), 1);
+        EXPECT_GT(Calculator<int>::Add(1, 1), 1);
+        // 1 + 1 <= 2
+        ASSERT_LE(Calculator<int>::Add(1, 1), 2);
+        EXPECT_LE(Calculator<int>::Add(1, 1), 2);
+        // 1 + 1 < 3
+        ASSERT_LT(Calculator<int>::Add(1, 1), 3);
+        EXPECT_LT(Calculator<int>::Add(1, 1), 3);
     }
 
 }// namespace assert
