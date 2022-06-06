@@ -2,6 +2,7 @@
 #define GTESTPRACTICE_CALCULATORTEST_H
 
 #include <gtest/gtest.h>
+#include "Calculator.h"
 
 namespace assert {
     class CalculatorTest : public ::testing::Test {
