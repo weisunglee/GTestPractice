@@ -1,4 +1,5 @@
 #include "Calculator.h"
+#include <exception>
 
 namespace assert {
     template<typename T>
@@ -18,6 +19,9 @@ namespace assert {
 
     template<typename T>
     T Calculator<T>::Divide(T t1, T t2) {
+        if (t2 == 0) {
+            throw std::exception{"Divide by zero"};
+        }
         return t1 / t2;
     }
 

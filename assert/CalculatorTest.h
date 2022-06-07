@@ -15,6 +15,9 @@ namespace assert {
         // 1 + 1 == 2
         ASSERT_EQ(Calculator<int>::Add(1, 1), 2);
         EXPECT_EQ(Calculator<int>::Add(1, 1), 2);
+        // 1 + 1 != 1
+        ASSERT_NE(Calculator<int>::Add(1, 1), 1);
+        EXPECT_NE(Calculator<int>::Add(1, 1), 1);
         // 1 + 1 >= 2
         ASSERT_GE(Calculator<int>::Add(1, 1), 2);
         EXPECT_GE(Calculator<int>::Add(1, 1), 2);
@@ -27,6 +30,23 @@ namespace assert {
         // 1 + 1 < 3
         ASSERT_LT(Calculator<int>::Add(1, 1), 3);
         EXPECT_LT(Calculator<int>::Add(1, 1), 3);
+    }
+
+    TEST_F(CalculatorTest, TestMinusTwoInt) {
+        // 1 - 1 = 0 is true
+        EXPECT_TRUE(Calculator<int>::Minus(1, 1) == 0);
+        ASSERT_TRUE(Calculator<int>::Minus(1, 1) == 0);
+        // 1 - 1 = 1 is false
+        EXPECT_FALSE(Calculator<int>::Minus(1, 1) == 1);
+        ASSERT_FALSE(Calculator<int>::Minus(1, 1) == 1);
+    }
+
+    TEST_F(CalculatorTest, TestDividByZero) {
+        EXPECT_THROW(Calculator<int>::Divide(1, 0), std::exception);
+    }
+
+    TEST_F(CalculatorTest, TestDividTwoInt) {
+        EXPECT_NO_THROW(Calculator<int>::Divide(4, 2));
     }
 
 }// namespace assert
