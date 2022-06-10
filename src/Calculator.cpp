@@ -27,4 +27,5 @@ namespace src {
 
     template class Calculator<int>;
     template class Calculator<double>;
+    template class Calculator<float>;
 }// namespace src
