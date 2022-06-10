@@ -1,7 +1,7 @@
 #ifndef GTESTPRACTICE_CALCULATOR_H
 #define GTESTPRACTICE_CALCULATOR_H
 
-namespace assert {
+namespace src {
     template<typename T>
     class Calculator {
     public:
@@ -10,6 +10,6 @@ namespace assert {
         static T Multiply(T t1, T t2);
         static T Divide(T t1, T t2);
     };
-}// namespace assert
+}// namespace src
 
 #endif//GTESTPRACTICE_CALCULATOR_H

@@ -3,6 +3,7 @@
 
 #include <gtest/gtest.h>
 #include "Calculator.h"
+using namespace src;
 
 namespace assert {
     class CalculatorTest : public ::testing::Test {

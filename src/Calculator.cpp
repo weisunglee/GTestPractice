@@ -1,7 +1,7 @@
 #include "Calculator.h"
 #include <exception>
 
-namespace assert {
+namespace src {
     template<typename T>
     T Calculator<T>::Add(T t1, T t2) {
         return t1 + t2;
@@ -27,4 +27,4 @@ namespace assert {
 
     template class Calculator<int>;
     template class Calculator<double>;
-}// namespace assert
+}// namespace src
